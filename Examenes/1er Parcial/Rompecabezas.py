@@ -1,3 +1,13 @@
+#Nombre: Mamani Acha Alvin Jairo
+#
+#Algoritmo A* Estrella: Se eligio este algoritmo como metodo de busqueda, porque nos facilita de
+# gran manera en los subprocesos que hay al momento de plantear el problema; y sobre todo nos ayuda
+# a encontrar el camino mas corto para hayar la solucion. Un problema que si se tuvo es que nose logro
+# implementar los costos, que nos ayudarian a que la respuesta del problema sea mas rapida; por ende si 
+# bien si se llega a la solucion, tarda unos segundos en hacerlo.
+#
+# Ejercicio 1:
+
 from libreria import *
 
 class Rompecabezas(ProblemaBusqueda):
@@ -32,18 +42,14 @@ class Rompecabezas(ProblemaBusqueda):
         return list_to_string(filas)
 
     def es_objetivo(self, estado):
-        '''Devuelve True si un estado es el estado_objetivo.'''
         return estado == OBJETIVO
 
     def costo(self, estado1, accion, estado2):
-        '''Devuelve el costo de ejecutar una accion. 
-        '''
+        #Falta implementa los costos...
         return 1
 
     def heuristica(self, estado):
-        #         Devuelve una estimacion de la distancia de un estado a otro, utilizando la distancia manhattan.
         filas = string_to_list(estado)
-
         distancia = 0
 
         for numero in valores_rompecabezas:
